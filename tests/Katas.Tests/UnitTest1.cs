@@ -1,10 +1,13 @@
-﻿namespace Katas.Tests;
+﻿using Katas;
+using Xunit;
 
-public class UnitTest1
+namespace Katas.Tests;
+
+public class HelloWorldKataTests
 {
     [Fact]
-    public void Test1()
+    public void Message_Returns_HelloWorld()
     {
-
+        Assert.Equal("Hello, World! Hola mundo !", HelloWorldKata.Message());
     }
 }
