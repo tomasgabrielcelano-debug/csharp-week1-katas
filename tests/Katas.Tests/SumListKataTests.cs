@@ -1,0 +1,31 @@
+using System;
+using Xunit;
+using Katas;
+using System.Reflection;
+
+namespace Katas.Tests;
+
+public class SumListKataTests
+{
+    
+    [Fact]
+    public void Sum_WhenNull_ThrowsArgumentNullException()
+    {
+        //Assert.Throws verifica que ESTA llamada lance la excepcion esperada
+        // la lambda "() => ..." Es una forma de pasar "codigo para ejecutar"
+        Assert.Throws<ArgumentNullException>(() => SumListKata.Sum(null));
+    }
+
+    [Fact]
+    public void Sum_WhenEmpty_ThrowsArgumentException()
+    {
+        Assert.Throws<ArgumentException>(() => SumListKata.Sum(Array.Empty<int>()));
+    }
+
+    [Fact]
+    public void Sum_WithNumbers_ReturnsSum()
+    {
+        Assert.Equal(6, SumListKata.Sum(new[] { 1, 2, 3 }));
+    }
+
+}

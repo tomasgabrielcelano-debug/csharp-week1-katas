@@ -11,4 +11,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Include="..\..\Exercises\Day1.cs" Link="Exercises\Day1.cs" />
+  </ItemGroup>
 </Project>
+
